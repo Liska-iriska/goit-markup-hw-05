@@ -503,3 +503,76 @@ body {
     padding: 0 15px;
     margin: 0 auto;
 }
+
+.div-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.label-footer {
+    display: flex;
+    color: #fff;
+    gap: 16px;
+    flex-direction: column;
+
+
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #fff;
+
+}
+
+.footer-email {
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 264px;
+    height: 40px;
+    background-color: transparent;
+    box-shadow: none;
+
+}
+
+.subs-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border: none;
+    background: #4d5ae5;
+    border-radius: 4px;
+    padding: 8px 24px;
+    width: 165px;
+    height: 40px;
+    position: absolute;
+    bottom: 0;
+    font-weight: 500;
+    font-size: 16px;
+    font-family: inherit;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: #fff;
+
+}
+
+.subscribe-wrap {
+    display: flex;
+    position: relative;
+    margin-right: 24px;
+}
+
+.footer-email::placeholder {
+    padding: 8px 16px;
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 200%;
+    letter-spacing: 0.04em;
+    color: #fff;
+
+}
+
+.icon-telegram {
+    fill: #fff;
+}
