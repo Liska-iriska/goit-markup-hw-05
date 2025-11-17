@@ -505,7 +505,6 @@ body {
 }
 
 .div-footer {
-    gap: 15px;
 }
 
 .label-footer {
@@ -582,19 +581,56 @@ body {
     justify-content: center;
 
     z-index: 999;
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);;
 }
-
+.modal-overlay.is-closed {
+    opacity: 0;
+    user-select: none;
+    pointer-events: none;
+}
 .modal {
-    background-color: #fff;
+    position: relative;
 
     border-radius: 4px;
     width: 408px;
-    height: 584px;
+    height: 80%;
+    max-height: 584px;
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
-    background: #fcfcfc;
+    background-color: #fcfcfc;
     padding: 0 24px;
+    overflow: auto;
+}
+
+.close-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    padding: 0;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #E7E9FC;
+    cursor: pointer;
+    right: 24px;
+    top: 34px;
+    border: none;
+    fill: #2E2F42;
+}
+
+.icon-close-i {
+    display: block;
 
 }
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #404bbf;
+    fill: #fff;
+
+}
+
 
 .modal-p {
     padding: 72px 0 16px;
@@ -605,13 +641,15 @@ body {
     font-size: 16px;
     letter-spacing: 0.02em;
     color: #2e2f42;
-
 }
 
 .form-div {
     display: flex;
-    flex-direction: column;    
-    gap: 8px;
+    flex-direction: column;
+}
+
+.form-field {
+    margin-bottom: 8px;
 }
 
 .form-label {
@@ -620,39 +658,121 @@ body {
     font-size: 12px;
     letter-spacing: 0.04em;
     color: #8e8f99;
-    display: flex;
+    display: block;
     line-height: 1.17;
-    
+    margin-bottom: 4px;
 }
 
-.form-input,
+
 .form-textarea {
+    padding: 8px 16px;
     width: 100%;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
-    width: 360px;
-    height: 40px;
-
-}
-
-.form-textarea {
-    width: 360px;
     height: 120px;
-    display: block;
+    resize: none;
     margin-bottom: 8px;
+    display: block;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 
-.check-p {
-    font-family: inherit;
-font-weight: 400;
-font-size: 12px;
-line-height: 1.17;
-letter-spacing: 0.04em;
-color: #8e8f99;
+.form-textarea:focus {
+    border-color: #4d5ae5;
+    outline: none;
+}
 
+.form-textarea::placeholder {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+
+}
+
+.form-input {
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    height: 40px;
+    padding-left: 38px;
+    background-color: transparent;
+    outline: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-wrapper {
+    position: relative;
+}
+
+.field-icon {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill: #2e2f42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form-input:focus {
+    border-color: #4d5ae5;
+    outline: none;
+}
+
+.privacy-pol {
+    color: #4D5AE5;
+    text-decoration: underline;
 }
 
 .privacy-pol-div {
-    display: flex;
-    gap: 8px;
+    margin-bottom: 24px;
+}
+
+
+.form-input:focus+.field-icon {
+    fill: #4d5ae5;
+
+}
+
+.btn-submit.order-service-btn {
+    margin: 0 auto;
+}
+
+.custom-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    border-radius: 2px;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    cursor: pointer;
+    margin-right: 8px;
+    fill: transparent;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color  250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+
+.checkbox:checked+.policy-label>.custom-box {
+    background-color: #404bbf;
+    fill: #f4f4fd;
+}
+
+.policy-label {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
 }
