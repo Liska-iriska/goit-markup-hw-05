@@ -505,8 +505,6 @@ body {
 }
 
 .div-footer {
-    display: flex;
-    flex-direction: row;
     gap: 15px;
 }
 
@@ -536,7 +534,7 @@ body {
 
 .subs-btn {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 
     border: none;
@@ -545,7 +543,6 @@ body {
     padding: 8px 24px;
     width: 165px;
     height: 40px;
-    position: absolute;
     bottom: 0;
     font-weight: 500;
     font-size: 16px;
@@ -554,12 +551,7 @@ body {
     text-align: center;
     color: #fff;
 
-}
 
-.subscribe-wrap {
-    display: flex;
-    position: relative;
-    margin-right: 24px;
 }
 
 .footer-email::placeholder {
@@ -575,4 +567,92 @@ body {
 
 .icon-telegram {
     fill: #fff;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(46, 47, 66, 0.4);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    z-index: 999;
+}
+
+.modal {
+    background-color: #fff;
+
+    border-radius: 4px;
+    width: 408px;
+    height: 584px;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+    background: #fcfcfc;
+    padding: 0 24px;
+
+}
+
+.modal-p {
+    padding: 72px 0 16px;
+    text-align: center;
+
+    font-family: inherit;
+    font-weight: 500;
+    font-size: 16px;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+
+}
+
+.form-div {
+    display: flex;
+    flex-direction: column;    
+    gap: 8px;
+}
+
+.form-label {
+    font-family: inherit;
+    font-weight: 400;
+    font-size: 12px;
+    letter-spacing: 0.04em;
+    color: #8e8f99;
+    display: flex;
+    line-height: 1.17;
+    
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    border: 1px solid rgba(46, 47, 66, 0.4);
+    border-radius: 4px;
+    width: 360px;
+    height: 40px;
+
+}
+
+.form-textarea {
+    width: 360px;
+    height: 120px;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.check-p {
+    font-family: inherit;
+font-weight: 400;
+font-size: 12px;
+line-height: 1.17;
+letter-spacing: 0.04em;
+color: #8e8f99;
+
+}
+
+.privacy-pol-div {
+    display: flex;
+    gap: 8px;
 }
