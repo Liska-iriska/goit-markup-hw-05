@@ -645,24 +645,18 @@ body {
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-close-i {
-    display: block;
-
-}
-
-.modal .close-btn:hover{
-     background-color: #404bbf;
-    border: none;
-    fill: #fff;
-}
-
+.close-btn:hover,
 .close-btn:focus {
     background-color: #404bbf;
     border: none;
     fill: #fff;
-
 }
 
+
+.icon-close-i {
+    display: block;
+
+}
 
 .modal-p {
     text-align: center;
@@ -790,7 +784,7 @@ body {
     cursor: pointer;
     background-color: #4D5AE5;
     border: none;
-    transition:  background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .custom-box {
@@ -809,7 +803,7 @@ body {
         fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.checkbox:checked+.policy-label>.custom-box {
+.checkbox:checked+.policy-label .custom-box {
     background-color: #404bbf;
     fill: #f4f4fd;
     border: none;
@@ -830,5 +824,5 @@ body {
 }
 
 .close-btn .icon {
-    transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
