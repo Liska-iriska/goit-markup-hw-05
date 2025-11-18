@@ -645,7 +645,12 @@ body {
         border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.close-btn:hover,
+.close-btn:hover {
+    background-color: #404bbf;
+    border: none;
+    fill: #fff;
+}
+
 .close-btn:focus {
     background-color: #404bbf;
     border: none;
@@ -657,6 +662,9 @@ body {
     display: block;
 
 }
+
+
+
 
 .modal-p {
     text-align: center;
@@ -770,22 +778,6 @@ body {
 
 }
 
-.btn-submit {
-    margin: 0 auto;
-    display: block;
-    min-width: 169px;
-    height: 56px;
-    font-family: "Roboto", sans-serif;
-    font-size: 16px;
-    font-weight: 500;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
-    color: #ffffff;
-    cursor: pointer;
-    background-color: #4D5AE5;
-    border: none;
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 .custom-box {
     display: inline-flex;
@@ -805,7 +797,7 @@ body {
 
 .checkbox:checked+.policy-label .custom-box {
     background-color: #404bbf;
-    fill: #f4f4fd;
+    fill: #F4F4FD;
     border: none;
 }
 
@@ -821,6 +813,23 @@ body {
 .privacy-pol {
     color: #4D5AE5;
     text-decoration: underline;
+}
+
+.btn-submit {
+    margin: 0 auto;
+    display: block;
+    min-width: 169px;
+    height: 56px;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #4D5AE5;
+    border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .close-btn .icon {
