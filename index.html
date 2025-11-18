@@ -392,38 +392,41 @@
           </li>
         </ul>
       </div>
-      <div class="div-footer">
-        <label for="label" class="label-footer">Subscribe
-          <input class="footer-email" type="email" placeholder="E-mail" name="footer-email">
-        </label>
+      <div class="div-footer-subs">
+        <p class="footer-paragr">Subscribe</p>
+        <form class="form-footer">
+          <label class="label-form-footer">
+            <input class="footer-email" type="email" placeholder="E-mail" name="footer-email">
+          </label>
+
+
+          <button class="subs-btn" type="submit">Subscribe
+            <svg class="icon-telegram" width="24" height="24">
+              <use href="./images/icons.svg#icon-telegram"></use>
+            </svg>
+          </button>
+        </form>
       </div>
-
-      <button class="subs-btn" type="submit">Subscribe
-        <svg class="icon-telegram" width="24" height="20">
-          <use href="./images/icons.svg#icon-telegram"></use>
-        </svg>
-      </button>
-
     </div>
-    </div>
+
   </footer>
   <!-- #endregion section footer -->
 
   <div class="modal-overlay is-closed">
     <div class="modal">
-      <p class="modal-p">Leave your contacts and we will call you back</p>
       <button class="close-btn" type="button">
         <svg class="icon" width="8" height="8">
           <use href="./images/icons.svg#icon-close-i"></use>
         </svg>
       </button>
+      <p class="modal-p">Leave your contacts and we will call you back</p>
+      
 
       <form class="form">
-        <div class="form-div">
           <div class="form-field">
-            <label class="form-label" for="form-name">Name</label>
+            <label class="form-label" for="user-name">Name</label>
             <div class="icon-wrapper">
-              <input class="form-input" type="text" name="name" id="form-name" autofocus>
+              <input class="form-input" type="text" name="user-name" id="user-name" autofocus>
               <svg class="field-icon" width="18" height="24">
                 <use href="./images/icons.svg#icon-person"></use>
               </svg>
@@ -450,15 +453,14 @@
             </div>
           </div>
 
-          <div class="form-field">
-            <label class="form-label" for="form-comment">Comment</label>
-            <textarea class="form-textarea" type="text" name="comment" id="form-comment"
-              placeholder="Text input"></textarea>
+          <div class="form-field text-area">
+            <label class="form-label" for="user-comment">Comment</label>
+            <textarea class="form-textarea" name="user-comment" id="user-comment" placeholder="Text input"></textarea>
           </div>
 
           <div class="privacy-pol-div">
-            <input type="checkbox" class="checkbox visually-hidden" id="checkbox" name="policy" value="true">
-            <label class="policy-label" for="checkbox">
+            <input type="checkbox" class="checkbox visually-hidden"  id="user-privacy" name="user-privacy" value="true">
+            <label class="policy-label" for="user-privacy">
               <span class="custom-box">
                 <svg class="checked-icon" width="10" height="8">
                   <use href="./images/icons.svg#icon-checked"></use>
@@ -468,9 +470,9 @@
               <a href="#" class="privacy-pol">Privacy Policy</a>
             </label>
           </div>
-          <button class="btn-submit order-service-btn" type="submit">Send</button>
 
-        </div>
+          <button class="btn-submit" type="submit">Send</button>
+
 
       </form>
     </div>
